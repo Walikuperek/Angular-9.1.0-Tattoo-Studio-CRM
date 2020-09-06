@@ -1,0 +1,113 @@
+@import '../../../styles.scss';
+
+nav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow-y: scroll;
+  padding-top: 100px;
+  width: 260px;
+  text-align: center;
+  background-color: $nav;
+
+  .aside-fixed-logo {
+    position: absolute;
+    top: 0px;
+    left: 50px;
+    max-height: 70px;
+    width: 150px;
+  }
+
+  .dropdown-btn,
+  .router-main-link {
+    padding: 8px 8px 8px 16px;
+    line-height: 24px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .sidenav a:hover,
+  .dropdown-btn:hover,
+  .router-main-link:hover {
+    color: #f1f1f1;
+  }
+
+  .active,
+  .router-main-link:focus {
+    background-color: $red;
+    color: white;
+  }
+
+  .dropdown-container {
+    text-align: left;
+    padding-top: 8px;
+    display: none;
+    background-color: #2626263f;
+    padding-left: 8px;
+  }
+
+  .dropdown-container--sub-type {
+    // hide by default
+    display: none;
+
+    @keyframes hoverSlideRightAnim {
+      0% {
+        transform: translateX(7px);
+        color: $red;
+      }
+      50% {
+        transform: translateX(13px);
+        color: white;
+      }
+      100% {
+        transform: translateX(16px);
+      }
+    }
+
+    // every single subtype
+    .sub-type-div,
+    // every single subsubtype
+    .sub-sub-type-div, 
+    // every single button (click) => open nextSibling submenu
+    button {
+      padding: 4px 16px 4px 16px;
+      font-size: 16px;
+      height: 24px;
+      line-height: 24px;
+      border-bottom: 1px solid $red-dark-lowOpacity;
+    }
+
+    // every single subtype
+    .sub-type-div:hover,
+    // every single subsubtype
+    .sub-sub-type-div:hover {
+      cursor: pointer;
+      color: white;
+
+      /* add animation -> slide right */
+      transition: 0.3s ease-in;
+      transform: translateX(16px);
+ 
+      /* set for smoothing entire animation */
+      animation-name: hoverSlideRightAnim;
+      animation-duration: 0.5s;
+    }
+  }
+  
+  .caret-down {
+    font-size: 20px;
+    float: right;
+  }
+
+}
+

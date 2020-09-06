@@ -1,0 +1,246 @@
+<nav id="left-nav">
+	<header>
+		<img src="../../../assets/logoKYT.png" class="aside-fixed-logo" />
+	</header>
+
+	<button
+		class="router-main-link"
+		routerLink="/dashboard">
+		<i-bs name="bar-chart-line"></i-bs>
+		DASHBOARD
+	</button>
+	
+	<button
+		class="router-main-link"
+		routerLink="/clients">
+		<i-bs name="person-lines-fill"></i-bs>
+		CLIENTS
+	</button>
+
+	<button 
+		class="dropdown-btn"
+		routerLink="/products">
+		<i-bs name="cart4"></i-bs>
+		PRODUCTS
+	    <i-bs name="caret-down-fill" class="caret-down"></i-bs>
+	</button>
+	<div class="dropdown-container">
+	    <section>
+			<button class="dropdown-btn">
+				Maszynki do tatuażu
+			    <i-bs name="caret-down-fill" class="caret-down"></i-bs>
+		  	</button>
+			<div class="dropdown-container--sub-type">
+				<div 
+					class="sub-type-div" 
+					(click)="showProductsBySubType('Maszynki do tatuażu', 'Basic Line')">Basic Line</div>
+				<div 
+					class="sub-type-div" 
+					(click)="showProductsBySubType('Maszynki do tatuażu', 'Premium Line')">Premium Line</div>
+				<div 
+					class="sub-type-div" 
+					(click)="showProductsBySubType('Maszynki do tatuażu', 'EQUALISER Rotary')">EQUALISER Rotary</div>
+				<div 
+					class="sub-type-div" 
+					(click)="showProductsBySubType('Maszynki do tatuażu', 'EGO Rotary')">EGO Rotary</div>
+				<div 
+					class="sub-type-div" 
+				  	(click)="showProductsBySubType('Maszynki do tatuażu', 'Stigma Rotary')">Stigma Rotary</div>
+				<div 
+					class="sub-type-div" 
+					(click)="showProductsBySubType('Maszynki do tatuażu', 'InkMachines Rotary')">InkMachines Rotary</div>
+				<div 
+					class="sub-type-div"
+					(click)="showProductsBySubType('Maszynki do tatuażu', 'Hungarian Rotary')">Hungarian Rotary</div>
+				<div 
+					class="sub-type-div" 
+					(click)="showProductsBySubType('Maszynki do tatuażu', 'InkJecta Rotary')">InkJecta Rotary</div>
+				<div 
+					class="sub-type-div" 
+					(click)="showProductsBySubType('Maszynki do tatuażu', 'Sunskin Stilo PEN')">Sunskin Stilo PEN</div>
+				<div 
+					class="sub-type-div" 
+					(click)="showProductsBySubType('Maszynki do tatuażu', 'Cheyenne Hawk')">Cheyenne Hawk</div>
+				<div 
+					class="sub-type-div" 
+					(click)="showProductsBySubType('Maszynki do tatuażu', 'Junix Machines')">Junix Machines</div>
+				<div 
+					class="sub-type-div" 
+					(click)="showProductsBySubType('Maszynki do tatuażu', 'Twister Rotary')">Twister Rotary</div>
+				<div 
+					class="sub-type-div" 
+					(click)="showProductsBySubType('Maszynki do tatuażu', 'Spektra Rotary')">Spektra Rotary</div>
+				<div 
+					class="sub-type-div" 
+					(click)="showProductsBySubType('Maszynki do tatuażu', 'Części')">Części</div>
+				<div 
+					class="sub-type-div" 
+					(click)="showProductsBySubType('Maszynki do tatuażu', 'Akcesoria')">Akcesoria</div>
+			</div>
+		</section>
+
+		<section>
+		  <button class="dropdown-btn" (click)="showProductsByType('Urządzenia')">
+		    Urządzenia
+		  </button>
+		</section>
+
+		<section>
+		  <button class="dropdown-btn">
+		    Rury i dzioby
+		    <i-bs name="caret-down-fill" class="caret-down"></i-bs>
+		  </button>
+		  <div class="dropdown-container--sub-type">
+			  <div 
+				  class="sub-type-div"
+				  (click)="showProductsBySubType('Rury i dzioby', 'Wielokrotnego użytku')">Wielokrotnego użytku</div>
+			  <div 
+				  class="sub-type-div"
+				  (click)="showProductsBySubType('Rury i dzioby', 'Jednorazowe')">Jednorazowe</div>
+		  </div>
+		</section>
+
+		<section>
+		  <button class="dropdown-btn">Zasilacze, kable, stopki
+		    <i-bs name="caret-down-fill" class="caret-down"></i-bs>
+		  </button>
+		  <div class="dropdown-container--sub-type">
+			  <div 
+				  class="sub-type-div"
+				  (click)="showProductsBySubType('Zasilacze, kable, stopki', 'Zasilacze')">Zasilacze</div>
+			  <div 
+				  class="sub-type-div"
+				  (click)="showProductsBySubType('Zasilacze, kable, stopki', 'Stopki')">Stopki</div>
+			  <div 
+				  class="sub-type-div"
+				  (click)="showProductsBySubType('Zasilacze, kable, stopki', 'Kable i akcesoria')">Kable i akcesoria
+              </div>
+		  </div>
+		</section>
+
+		<section>
+		  <button class="dropdown-btn">
+		    Farby do tatuażu
+		    <i-bs name="caret-down-fill" class="caret-down"></i-bs>
+		  </button>
+		  <div class="dropdown-container--sub-type">
+			<div 
+				class="sub-sub-type-div" 
+				(click)="showProductsBySubType('Farby do tatuażu', 'Japan Black')">
+				Japan Black
+			</div>
+			<div 
+				class="sub-sub-type-div" 
+				(click)="showProductsBySubType('Farby do tatuażu', 'Kuro Sumi')">
+				Kuro Sumi
+			</div>
+			<div 
+				class="sub-sub-type-div" 
+				(click)="showProductsBySubType('Farby do tatuażu', 'Panthera Black Ink')">
+				Panthera Black Ink
+			</div>
+			<div 
+				class="sub-sub-type-div" 
+				(click)="showProductsBySubType('Farby do tatuażu', 'Silverback Ink')">
+				Silverback Ink
+			</div>
+			<div 
+				class="sub-sub-type-div" 
+				(click)="showProductsBySubType('Farby do tatuażu', 'Dynamic Ink')">
+				Dynamic Ink
+			</div>
+
+			<button class="dropdown-btn" style="height: 32px;">
+				Intenze Ink
+	    		<i-bs name="caret-down-fill" class="caret-down"></i-bs>
+			</button>
+			<div class="dropdown-container">
+				<div 
+					class="sub-sub-type-div"
+				   	(click)="showProductsBySubSubType('Farby do tatuażu', 'Intenze Ink', 'Intenze Ink Colors')">
+					Intenze Ink Colors
+				</div>
+				<div 
+					class="sub-sub-type-div"
+				   	(click)="showProductsBySubSubType('Farby do tatuażu', 'Intenze Ink', 'Intenze Andy Engel')">
+					Intenze Andy Engel
+				</div>
+				<div 
+					class="sub-sub-type-div"
+					(click)="showProductsBySubSubType('Farby do tatuażu', 'Intenze Ink', 'Intenze Boris Colors')">
+					Intenze Boris Colors
+				</div>
+				<div 
+					class="sub-sub-type-div"
+					(click)="showProductsBySubSubType('Farby do tatuażu', 'Intenze Ink', 'Intenze Mike DeMasi')">
+					Intenze Mike DeMasi
+				</div>
+				<div 
+					class="sub-sub-type-div"
+					(click)="showProductsBySubSubType('Farby do tatuażu', 'Intenze Ink', 'Intenze Dragon Ink')">
+					Intenze Dragon Ink
+				</div>		 
+			</div>
+		  </div>
+		</section>
+
+		<section>
+		  	<button class="dropdown-btn">
+		    	Igły Cartridge
+		    	<i-bs name="caret-down-fill" class="caret-down"></i-bs>
+		  	</button>
+		  	<div class="dropdown-container--sub-type">
+				<div 
+					class="sub-sub-type-div" 
+					(click)="showProductsBySubType('Igły CARTRIDGE', 'KWADRON Cartridges')">
+		      		KWADRON Cartridges
+				</div>
+				<div 
+					class="sub-sub-type-div" 
+					(click)="showProductsBySubType('Igły CARTRIDGE', 'Cartridge Tubes')">
+				  	Cartridge Tubes
+				</div>
+
+			</div>
+		</section>
+
+		<section>
+			<button 
+				class="dropdown-btn" 
+				(click)="showProductsByType('Higiena')">
+				Higiena
+		  	</button>
+		</section>
+
+		<section>
+		  <button class="dropdown-btn">
+		    Kosmetyki i znieczulenia
+		    <i-bs name="caret-down-fill" class="caret-down"></i-bs>
+		  </button>
+		  <div class="dropdown-container--sub-type">
+			<div 
+				class="sub-sub-type-div" 
+				(click)="showProductsBySubType('Kosmetyki i znieczulenia', 'Kremy i pielęgnacja')">
+		      	Kremy i pielęgnacja
+			</div>
+			
+		  </div>
+		</section>
+
+	</div>
+</nav>
+<!-- 
+TODO:
+        <i-bs name="calendar"></i-bs>
+        Calendar
+
+        <i-bs name="person-lines-fill"></i-bs>
+        Clients
+
+        <i-bs name="graph-up"></i-bs>
+        Analitycs
+
+        <i-bs name="bar-chart-line"></i-bs>
+        Raports
+         
+-->

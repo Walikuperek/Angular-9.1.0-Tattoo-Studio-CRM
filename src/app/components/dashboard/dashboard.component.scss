@@ -1,0 +1,15 @@
+@import '../../../styles.scss';
+
+#dashboard-wrap {
+  position: absolute;
+  left: 280px;
+  width: calc(100vw - 290px);
+
+  .dashboard {
+    background: $nav;
+    border-radius: 10px;
+    color: $light;
+    padding: 40px;
+    margin-top: 50px;
+  }
+}
