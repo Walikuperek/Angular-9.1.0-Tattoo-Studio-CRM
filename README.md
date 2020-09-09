@@ -2,7 +2,12 @@
 
 ## angular-9-crm-tattoo-studio
 Angular frontend for Tattoo Studio
-![angular-crm](/src/assets/crm-img.png)
+
+Clients panel
+![angular-crm](/src/assets/clients-crm.png)
+
+Products panel
+![angular-crm](/src/assets/products-crm.png)
 
 ###### work in progress
 
