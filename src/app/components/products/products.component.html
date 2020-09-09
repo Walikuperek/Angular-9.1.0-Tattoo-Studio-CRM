@@ -1,16 +1,5 @@
 <div id="products-wrap">
   <div class="products">
-    <h2 class="header-products">
-      <span class="nav-stream">NAVIGATION</span>
-      <span class="slash-stream">/</span>
-      Products
-      <span class="slash-stream">{{ ifTypeSlash }}</span>
-      <span class="nav-stream">{{ type }}</span>
-      <span class="slash-stream">{{ ifSubTypeSlash }}</span>
-      {{ subtype }}
-      <span class="slash-stream">{{ ifSubSubTypeSlash }}</span>
-      <span class="nav-stream">{{ subsubtype }}</span>
-    </h2>
 
     <div class="products-ul">
 
@@ -19,8 +8,8 @@
           <input 
             type="text" 
             id="search" 
-            [(ngModel)]="name" 
-            (ngModelChange)="searchByName()" 
+            [(ngModel)]="providedWordsForSearch"
+            (ngModelChange)="search()" 
             placeholder="Search..." />
           <i-bs class="search-icon" name="search" width="1.1rem" height="1.1rem"></i-bs>
         </div>
@@ -32,7 +21,7 @@
         <span class="brutto">Brutto</span>
       </div>
       <ul class="list-group-ul">
-        <li class="list-group-item" *ngFor="let item of items; let i = index">
+        <li class="list-group-item" *ngFor="let item of items">
           <img src="{{ item.ImgSrc }}" width="48" height="48" />
           <a href="{{ item.Link }}" class="tooltip" target="_blank">{{ item.Name }}
             <span class="tooltiptext">{{ item.Description }}</span>

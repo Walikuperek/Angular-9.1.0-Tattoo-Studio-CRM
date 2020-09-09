@@ -1,0 +1,38 @@
+ @import '../../../../styles.scss';
+
+ // REVENUE
+ ///////////////////////////////////////////
+.client-revenue {
+  color: $gray;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  .earnings,
+  .expenses {
+    position: relative;
+    color: $red;
+    font-size: 18px;
+    font-family: $font-family-impact;
+    background-color: rgba(48, 48, 48, 0.666);
+    padding: 12px 66px 12px 66px;
+    margin: 10px 20px 10px 20px;
+    border-radius: 5px;
+    @include boxShadow(10px 10px 12px -6px $red-dark-lowOpacity);
+
+    h1 {
+      text-align: center;
+      color: $gray;
+    }
+
+    i-bs {
+      position: absolute;
+      z-index: 0;
+      top: 20px;
+      right: 20px;
+      opacity: 0.6;
+      font-size: 54px;
+      color: $gray;
+    }
+  }
+}

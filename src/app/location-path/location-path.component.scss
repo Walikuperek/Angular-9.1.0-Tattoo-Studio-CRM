@@ -1,0 +1,30 @@
+@import '../../styles.scss';
+
+#path-wrapper {
+    font-size: 22px;
+    line-height: 22px;
+    color: $red;
+    font-family: Impact,
+        Haettenschweiler,
+        'Arial Narrow Bold',
+        sans-serif;
+
+    .location {
+        display: flex;
+        flex-direction: row;
+        align-self: auto;
+        align-items: center;
+        height: 30px;
+        line-height: 30px;
+
+        i-bs {
+            margin: 3px 10px 0 10px;
+           
+        }
+
+        i-bs:hover {
+            color: $light;
+            cursor: pointer;
+        }
+    }
+}

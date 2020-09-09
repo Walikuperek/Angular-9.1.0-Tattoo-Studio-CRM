@@ -25,17 +25,17 @@ export class ProductsService {
 
   // Service methods
   searchByType(type: string) {
-    console.log({ type });
+    // console.log({ type });
     this.__searchByTypeSource.next(type);
   }
 
   searchBySubType(subtype: string) {
-    console.log(this.__searchBySubTypeSource);
+    // console.log(this.__searchBySubTypeSource);
     this.__searchBySubTypeSource.next(subtype);
   }
 
   searchBySubSubType(subsubtype: string) {
-    console.log({ subsubtype });
+    // console.log({ subsubtype });
     this.__searchBySubSubTypeSource.next(subsubtype);
   }
 }

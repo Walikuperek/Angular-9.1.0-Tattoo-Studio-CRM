@@ -5,34 +5,39 @@
 
 	<button
 		class="router-main-link"
-		routerLink="/dashboard">
+		routerLink="/dashboard"
+		routerLinkActive="active">
 		<i-bs name="bar-chart-line"></i-bs>
 		DASHBOARD
 	</button>
 	
 	<button
 		class="router-main-link"
-		routerLink="/clients">
+		routerLink="/clients"
+		routerLinkActive="active">
 		<i-bs name="person-lines-fill"></i-bs>
 		CLIENTS
 	</button>
 
 	<button 
-		class="dropdown-btn"
-		routerLink="/products">
+		class="dropdown-btn" id="router-products-link"
+		routerLink="/products"
+		routerLinkActive="active">
 		<i-bs name="cart4"></i-bs>
 		PRODUCTS
 	    <i-bs name="caret-down-fill" class="caret-down"></i-bs>
 	</button>
 	<div class="dropdown-container">
 	    <section>
-			<button class="dropdown-btn">
+			<button
+				class="dropdown-btn"
+			>
 				Maszynki do tatuażu
 			    <i-bs name="caret-down-fill" class="caret-down"></i-bs>
 		  	</button>
 			<div class="dropdown-container--sub-type">
 				<div 
-					class="sub-type-div" 
+					class="sub-type-div"
 					(click)="showProductsBySubType('Maszynki do tatuażu', 'Basic Line')">Basic Line</div>
 				<div 
 					class="sub-type-div" 
@@ -80,13 +85,18 @@
 		</section>
 
 		<section>
-		  <button class="dropdown-btn" (click)="showProductsByType('Urządzenia')">
+		  <button 
+		 	class="dropdown-btn" 
+			(click)="showProductsByType('Urządzenia')"
+		  >
 		    Urządzenia
 		  </button>
 		</section>
 
 		<section>
-		  <button class="dropdown-btn">
+		  <button 
+			class="dropdown-btn"
+		  >
 		    Rury i dzioby
 		    <i-bs name="caret-down-fill" class="caret-down"></i-bs>
 		  </button>

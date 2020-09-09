@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-const baseUrl = 'http://localhost:3000/cartridges';
+const baseUrl = 'http://localhost:3000/items';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +14,8 @@ export class ItemService {
     return this.http.get(baseUrl);
   }
 
-  findByName(name: string) {
-    return this.http.get(`${baseUrl}/search/${name}`);
+  findByAll(providedWordsForSearch: string) {
+    return this.http.get(`${baseUrl}/search/${providedWordsForSearch}`);
   }
 
   findByType(type: string) {

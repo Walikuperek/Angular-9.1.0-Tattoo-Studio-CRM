@@ -1,0 +1,94 @@
+@import '../../../../styles.scss';
+
+// USED ITEMS
+///////////////////////////////////////////
+.client-used-items {
+  padding: 10px;
+  margin: 0 0.5% 0 0.5%;
+  color: $red;
+  text-align: center;
+
+  h2 {
+    margin-top: -5px;
+  }
+
+  .table-used-items {
+    width: 100%;
+    border: 3px solid $nav;
+    border-radius: 5px;
+
+    .table-header {
+      border-radius: 20px;
+      background: linear-gradient(220deg, $nav, $red-dark-lowOpacity, $red-dark-lowOpacity, $nav);
+      height: 24px;
+      line-height: 24px;
+
+      .td-header-name {
+        padding-left: 5px;
+        width: 55%;
+        text-align: left;
+      }
+
+      .td-header-price {
+        width: 10%;
+        text-align: right;
+        padding-right: 5px;
+      }
+
+      .td-header-stock {
+        width: 10%;
+        text-align: right;
+        padding-right: 5px;
+      }
+
+      .td-header-total {
+        width: 15%;
+        text-align: right;
+        padding-right: 5px;
+      }
+    }
+
+    .table-product {
+      &--zebra {
+        background-color: $red-dark-lowOpacity;
+        color: $white;
+        text-align: right;
+
+        .td-name {
+          text-align: left;
+          padding-left: 5px;
+        }
+        .td-price,
+        .td-stock,
+        .td-total {
+          padding-right: 5px;
+        }
+      }
+
+      td {
+        color: $gray;
+        width: 20%;
+        text-align: right;
+        border-bottom: 2px solid white;
+        padding: 2px 5px 2px 5px;
+      }
+
+      .td-name {
+        width: 55%;
+        text-align: left;
+      }
+
+      .td-price {
+        width: 10%;
+      }
+
+      .td-stock {
+        width: 10%;
+      }
+
+      .td-total {
+        width: 15%;
+      }
+    }
+  }
+}

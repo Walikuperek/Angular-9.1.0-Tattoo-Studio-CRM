@@ -11,6 +11,12 @@ import { LeftFixedNavComponent } from './components/left-fixed-nav/left-fixed-na
 import { ProductsComponent } from './components/products/products.component';
 import { CustomersComponent } from './components/customers/customers.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ClientOrdersRegularityChartComponent } from './components/customers/client-orders-regularity-chart/client-orders-regularity-chart.component';
+import { ClientDataComponent } from './components/customers/client-data/client-data.component';
+import { ClientRevenueComponent } from './components/customers/client-revenue/client-revenue.component';
+import { ClientUsedItemsComponent } from './components/customers/client-used-items/client-used-items.component';
+import { LocationPathComponent } from './location-path/location-path.component';
+import { ClientsListComponent } from './components/customers/clients-list/clients-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +24,13 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     LeftFixedNavComponent,
     ProductsComponent,
     CustomersComponent,
-    DashboardComponent
+    DashboardComponent,
+    ClientOrdersRegularityChartComponent,
+    ClientDataComponent,
+    ClientRevenueComponent,
+    ClientUsedItemsComponent,
+    LocationPathComponent,
+    ClientsListComponent
   ],
   imports: [
     BrowserModule,

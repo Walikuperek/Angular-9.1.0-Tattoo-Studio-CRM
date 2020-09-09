@@ -1,15 +1,19 @@
 <div>
   <app-left-fixed-nav></app-left-fixed-nav>
-  
-  <div style=" 
-    position: relative;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    width: 100%;
-    height: 100%;">
-    <!-- <app-products #products></app-products> -->
+
+  <!-- 
+    app-wrapper positioned relative 
+  -->
+  <div id="app-wrapper">
+
+    <!-- 
+      app-location-path positioned absolute 
+    -->
+    <app-location-path></app-location-path>
+
+    <!-- 
+      Router
+     -->
     <router-outlet></router-outlet>
   </div>
 </div>

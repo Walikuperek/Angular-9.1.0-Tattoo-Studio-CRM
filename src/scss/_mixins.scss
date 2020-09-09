@@ -1,0 +1,21 @@
+/*
+    _mixins.scss
+    @import at ../styles.scss
+    exporting Mixins
+*/
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+@mixin animation($property) {
+    -webkit-animation: $property;
+    animation: $property;
+}
+
+@mixin boxShadow($property) {
+    -webkit-box-shadow: $property;
+    -moz-box-shadow: $property;
+    box-shadow: $property;
+}

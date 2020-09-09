@@ -9,7 +9,7 @@
     background: $nav;
     border-radius: 10px;
     color: $light;
-    padding: 40px;
+    padding: 20px 40px 10px 10px;
     margin-top: 50px;
 
     .search-component {
@@ -105,12 +105,12 @@
 
     .products-ul {
       padding: 10px;
-      margin-top: 30px;
+      // margin-top: 10px;
       width: 100%;
 
       .titles {
         position: relative;
-        background-color: $red;
+        background-color: $red-dark-lowOpacity;
         min-height: 20px;
         border-radius: 5px;
         padding-top: 10px;
@@ -150,6 +150,9 @@
             margin-right: 10px;
           }
 
+          a {
+            text-decoration: none;
+          }
           a,
           a:visited {
             color: $secondary;

@@ -12,16 +12,9 @@ export class ProductsComponent implements OnInit {
  
   items: any;
 
-  currentItem       = null;
-  currentIndex      = -1;
-
-  name              = '';
-  type              = '';
-  subtype           = '';
-  subsubtype        = '';
-  ifTypeSlash       = '';
-  ifSubTypeSlash    = '';
-  ifSubSubTypeSlash = '';
+  currentItem            = null;
+  currentIndex           = -1;
+  providedWordsForSearch = '';
 
   clickTypeFromLeftFixedNav: Subscription;
   clickSubTypeFromLeftFixedNav: Subscription;
@@ -29,21 +22,29 @@ export class ProductsComponent implements OnInit {
 
   constructor(
     private itemService: ItemService,
-    private productsService: ProductsService
-  ) { 
+    private productsService: ProductsService) { 
+
     this.clickTypeFromLeftFixedNav = 
-      this.productsService.getClickEventByType().subscribe((type) => {
-        console.log({ type });
+      this.productsService
+      .getClickEventByType()
+      .subscribe((type) => {
+        // console.log({ type });
         this.selectByType(type);
       });
+
     this.clickSubTypeFromLeftFixedNav =
-      this.productsService.getClickEventBySubType().subscribe((subtype) => {
-        console.log({ subtype });
+      this.productsService
+      .getClickEventBySubType()
+      .subscribe((subtype) => {
+        // console.log({ subtype });
         this.selectBySubType('', subtype);
       });
+
     this.clickSubSubTypeFromLeftFixedNav =
-      this.productsService.getClickEventBySubSubType().subscribe((subsubtype) => {
-        console.log({ subsubtype });
+      this.productsService
+      .getClickEventBySubSubType()
+      .subscribe((subsubtype) => {
+        // console.log({ subsubtype });
         this.selectBySubSubType('', '', subsubtype);
       });
   }
@@ -52,12 +53,12 @@ export class ProductsComponent implements OnInit {
     this.retrieveItems();
   }
 
-  retrieveItems() {
+  async retrieveItems() {
     this.itemService.getAll()
       .subscribe(
         data => {
           this.items = data;
-          console.log(data);
+          // console.log(data);
         },
         error => {
           console.log(error);
@@ -65,20 +66,12 @@ export class ProductsComponent implements OnInit {
       );
   }
 
-  searchByName() {
-    this.type = '';
-    this.subtype = '';
-    this.subsubtype = '';
-
-    this.ifTypeSlash = '';
-    this.ifSubTypeSlash = '';
-    this.ifSubSubTypeSlash = '';
-    
-    this.itemService.findByName(this.name)
+  async search() {    
+    this.itemService.findByAll(this.providedWordsForSearch)
       .subscribe(
         data => {
           this.items = data;
-          console.log(data);
+          // console.log(data);
         },
         error => {
           console.log(error);
@@ -87,20 +80,11 @@ export class ProductsComponent implements OnInit {
   }
 
   selectByType(type: string = '') {
-    this.type = type;
-    this.ifTypeSlash = '/';
-
-    this.subtype = '';
-    this.subsubtype = '';
-
-    this.ifSubTypeSlash = '';
-    this.ifSubSubTypeSlash = '';
-    
     this.itemService.findByType(type)
       .subscribe(
         data => {
           this.items = data;
-          console.log(data);
+          // console.log(data);
         },
         error => {
           console.log(error);
@@ -109,20 +93,11 @@ export class ProductsComponent implements OnInit {
   }
 
   selectBySubType(type: string = '', subtype: string = '') {
-    this.type = type;
-    this.subtype = subtype;
-
-    this.ifTypeSlash = '/';
-    this.ifSubTypeSlash = '/';
-
-    this.subsubtype = '';
-    this.ifSubSubTypeSlash = '';
-    // alert(`products: ${type} ${subtype}`);
     this.itemService.findBySubType(subtype)
       .subscribe(
         data => {
           this.items = data;
-          console.log(data);
+          // console.log(data);
         },
         error => {
           console.log(error);
@@ -131,19 +106,11 @@ export class ProductsComponent implements OnInit {
   }
 
   selectBySubSubType(type: string = '', subtype: string = '', subsubtype: string = '') {
-    this.type = type;
-    this.subtype = subtype;
-    this.subsubtype = subsubtype;
-
-    this.ifTypeSlash = '/';
-    this.ifSubTypeSlash = '/';
-    this.ifSubSubTypeSlash = '/';
-
     this.itemService.findBySubSubType(subsubtype)
       .subscribe(
         data => {
           this.items = data;
-          console.log(data);
+          // console.log(data);
         },
         error => {
           console.log(error);
