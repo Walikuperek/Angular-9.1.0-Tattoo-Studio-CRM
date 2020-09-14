@@ -17,14 +17,14 @@ Products panel
 ###### * fullCallendar coming soon...
 
 #### Studio CRM tech stack - MySQL, Express, Angular, Node.js, RxJS
-* [rest-nodejs-mysql-express](https://github.com/Walikuperek/rest-nodejs-mysql-express)
+* [Node-MySQL-Express-BodyParser-Cors](https://github.com/Walikuperek/Node-MySQL-Express-BodyParser-Cors)
 * mysql database
 * [angular frontend](https://github.com/Walikuperek/Angular-9.1.0-Tattoo-Studio-CRM)
 * [Web-Scrap-Puppeteer-MySQL](https://github.com/Walikuperek/Web-Scrap-Puppeteer-MySQL) as a database filler
 * [Angular RxJS](https://angular.io/guide/rx-library) for sending data between components
 
 ## Project pre-run
-> [rest-nodejs-mysql-express](https://github.com/Walikuperek/rest-nodejs-mysql-express)
+> [Node-MySQL-Express-BodyParser-Cors](https://github.com/Walikuperek/Node-MySQL-Express-BodyParser-Cors)
 ###### run this backend before
 
 ### Project setup
