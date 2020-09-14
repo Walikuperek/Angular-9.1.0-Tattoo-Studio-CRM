@@ -13,6 +13,8 @@ Products panel
 
 ## NPM packages
 * icons: ngx-bootstrap-icons
+* charts: chart.js
+###### * fullCallendar coming soon...
 
 #### Studio CRM tech stack - MySQL, Express, Angular, Node.js, RxJS
 * [rest-nodejs-mysql-express](https://github.com/Walikuperek/rest-nodejs-mysql-express)
